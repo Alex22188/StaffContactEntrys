@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StaffContactEntrys.MainPage">
+
+
+
+
+    <ScrollView>
+
+
+
+        <ScrollView>
+
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="burntorangetextureimage.png " Aspect="AspectFill" Grid.ColumnSpan="2"/>
+
+
+                    <StackLayout>
+                        <Image Source="roilogo.png"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Grid.Column="2"/>
+                    </StackLayout>
+
+                </Grid>
+                <Grid Grid.Row="2" Padding="5">
+                    <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+
+
+
+                    </StackLayout>
+                    <StackLayout>
+
+                        <Button Text="Go to Settings" Clicked="OnSettings_Clicked" HorizontalOptions="End" BackgroundColor="DarkGray"/>
+
+
+
+
+                        <Label Text="Staff Contact Entry" FontSize="24" HorizontalOptions="CenterAndExpand" Margin="0, 20" TextColor="DarkGray"/>
+
+
+
+
+                        <Entry Placeholder="Id" x:Name="IdEntry" BackgroundColor="DarkGoldenrod"/>
+                        <Entry Placeholder="Name" x:Name="NameEntry"  BackgroundColor="DarkGoldenrod"/>
+                        <Entry Placeholder="Phone" x:Name="PhoneEntry"  BackgroundColor="DarkGoldenrod"/>
+                        <Entry Placeholder="Department" x:Name="DepartmentEntry"  BackgroundColor="DarkGoldenrod"/>
+                        <Entry Placeholder="AddressStreet" x:Name="AddressStreetEntry"  BackgroundColor="DarkGoldenrod"/>
+                        <Entry Placeholder="AddressCity" x:Name="AddressCityEntry"  BackgroundColor="DarkGoldenrod"/>
+                        <Entry Placeholder="AddressState" x:Name="AddressStateEntry"  BackgroundColor="DarkGoldenrod"/>
+                        <Entry Placeholder="AddressZIP" x:Name="AddressZIPEntry"  BackgroundColor="DarkGoldenrod"/>
+                        <Entry Placeholder="AddressCountry" x:Name="AddressCountryEntry"  BackgroundColor="DarkGoldenrod"/>
+
+
+                        <Button Text="Add Staff" Clicked="AddPeople_Clicked" HorizontalOptions="FillAndExpand" BackgroundColor="DarkGray"/>
+
+                        <ListView x:Name="PeopleListView" HasUnevenRows="True">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Grid>
+                                            <Frame CornerRadius="10" Margin="10" Padding="20" BackgroundColor="Maroon">
+                                                <Grid>
+
+
+
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+
+
+                                                    </Grid.RowDefinitions>
+
+                                                    <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="0">
+                                                        <Label Text="Id:" Padding="0,0,2,0"/>
+                                                        <Label Text="{Binding Id}"/>
+                                                    </StackLayout>
+
+
+                                                    <StackLayout Orientation="Horizontal" Padding="5" Grid.Row="1">
+                                                        <Label Text="Name:" Padding="0,0,2,0"/>
+                                                        <Label Text="{Binding Name}"/>
+                                                    </StackLayout>
+
+
+                                                    <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="2">
+                                                        <Label Text="Phone Number:" Padding="0,0,2,0"/>
+                                                        <Label Text="{Binding Phone}" Margin="10,0,0,0"/>
+                                                    </StackLayout>
+
+
+                                                    <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="3">
+                                                        <Label Text="Department:" Padding="0,0,2,0"/>
+                                                        <Label Text="{Binding Department}" Margin="10,0,0,0"/>
+                                                    </StackLayout>
+
+
+                                                    <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="4">
+                                                        <Label Text="Street Address:" Padding="0,0,2,0"/>
+                                                        <Label Text="{Binding AddressStreet}" Margin="10,0,0,0"/>
+                                                    </StackLayout>
+
+                                                    <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="5">
+                                                        <Label Text="City:" Padding="0,0,2,0"/>
+                                                        <Label Text="{Binding AddressCity}" Margin="10,0,0,0"/>
+                                                    </StackLayout>
+
+                                                    <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="6">
+                                                        <Label Text="State:" Padding="0,0,2,0"/>
+                                                        <Label Text="{Binding AddressState}" Margin="10,0,0,0"/>
+                                                    </StackLayout>
+
+                                                    <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="7">
+                                                        <Label Text="ZIP:" Padding="0,0,2,0"/>
+                                                        <Label Text="{Binding AddressZIP}" Margin="10,0,0,0"/>
+                                                    </StackLayout>
+
+                                                    <StackLayout Orientation="Horizontal" Padding="10" Grid.Row="8">
+                                                        <Label Text="Country:" Padding="0,0,2,0"/>
+                                                        <Label Text="{Binding AddressCountry}" Margin="10,0,0,0"/>
+                                                    </StackLayout>
+
+
+
+
+                                                    <StackLayout Orientation="Horizontal" Padding="35" Grid.Row="9">
+                                                        <Button Text="Update" Clicked="UpdatePeople_Clicked" />
+                                                        <Button Text="Delete" Clicked="DeletePeople_Clicked" Margin="10,0,0,0"/>
+                                                        <Button Text="Details" Clicked="ViewPeopleDetails_Clicked" Margin="10,0,0,0"/>
+                                                    </StackLayout>
+
+
+
+                                                </Grid>
+                                            </Frame>
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ScrollView>
+</ContentPage>

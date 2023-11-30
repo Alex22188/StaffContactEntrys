@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StaffContactEntrys.UpdatePeople"
+             Title="UpdatePeople">
+
+
+
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="150"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid Grid.Row="0">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="100"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+
+			<Image Source="burntorangetextureimage.png " Aspect="AspectFill" Grid.ColumnSpan="2"/>
+
+
+
+			<StackLayout>
+				<Image Source="roilogo.png"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Grid.Column="2"/>
+			</StackLayout>
+
+		</Grid>
+		<Grid Grid.Row="2" Padding="5">
+			<StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+
+
+
+			</StackLayout>
+			<StackLayout>
+
+
+
+
+
+				<Frame BackgroundColor="#F5F5DC" Padding="10" Margin="20">
+					<StackLayout>
+						<!-- Input Fields fo Updating Student Details -->
+						<Entry x:Name="IdEntry" Placeholder="Id" />
+						<Entry x:Name="NameEntry" Placeholder="Name" />
+						<Entry x:Name="PhoneEntry" Placeholder="Phone" />
+						<Entry x:Name="DepartmentEntry" Placeholder="Department" />
+						<Entry x:Name="AddressStreetEntry" Placeholder="AddressStreet" />
+						<Entry x:Name="AddressCityEntry" Placeholder="AddressCity" />
+						<Entry x:Name="AddressStateEntry" Placeholder="AddressState" />
+						<Entry x:Name="AddressZIPEntry" Placeholder="AddressZIP" />
+						<Entry x:Name="AddressCountryEntry" Placeholder="AddressCountry" />
+
+
+
+						<Button Text="Update" Clicked="UpdatePeople_Clicked" BackgroundColor="DarkGrey"/>
+					</StackLayout>
+				</Frame>
+			</StackLayout>
+		</Grid>
+	</Grid>
+
+
+
+
+
+
+
+
+
+
+
+</ContentPage>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StaffContactEntrys.StaffDetails"
+             Title="StaffDetails">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Source="burntorangetextureimage.png " Aspect="AspectFill" Grid.ColumnSpan="2"/>
+
+
+
+
+            <StackLayout>
+                <Image Source="roilogo.png"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Grid.Column="2"/>
+            </StackLayout>
+
+        </Grid>
+        <Grid Grid.Row="2" Padding="5">
+            <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+
+
+
+            </StackLayout>
+            <StackLayout>
+
+
+                <StackLayout>
+                    <Frame BackgroundColor="Gray" Padding="10" Margin="20">
+                        <StackLayout>
+                            <Label Text="Id:"/>
+                            <Label Text="{Binding Id}"/>
+                            <Label Text="Name:"/>
+                            <Label Text="{Binding Name}"/>
+                            <Label Text="Phone:"/>
+                            <Label Text="{Binding Phone}"/>
+                            <Label Text="Department:"/>
+                            <Label Text="{Binding Department}"/>
+                            <Label Text="Street Address:"/>
+                            <Label Text="{Binding AddressStreet}"/>
+                            <Label Text="City:"/>
+                            <Label Text="{Binding AddressCity}"/>
+                            <Label Text="State:"/>
+                            <Label Text="{Binding AddressState}"/>
+                            <Label Text="ZIP:"/>
+                            <Label Text="{Binding AddressZIP}"/>
+                            <Label Text="Country:"/>
+                            <Label Text="{Binding AddressCountry}"/>
+
+
+                            <Button Text="Back to Staff Contact page"   BackgroundColor="DarkGoldenrod" Padding="5"  Clicked="OnBack_Clicked"/>
+
+
+
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+            </StackLayout>
+        </Grid>
+    </Grid>
+
+
+
+</ContentPage>
