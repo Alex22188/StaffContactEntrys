@@ -11,7 +11,7 @@ namespace StaffContactEntrys
    public class DatabaseServiceCSV
     {
 
-        string csvFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "PeopleDB.csv");
+        string csvFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), @"C:\Users\alex4\source\repos\StaffContactEntrys\StaffContactEntrys\PeopleDB.csv");
 
 
         public DatabaseServiceCSV()
